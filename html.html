@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos HTML</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fff0f5; margin: 0; padding: 20px; color: #4a148c; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 15px rgba(233, 30, 99, 0.2); }
+        h2 { color: #d81b60; border-bottom: 3px solid #f06292; padding-bottom: 10px; }
+        h3 { color: #ad1457; margin-top: 30px; }
+        pre { background-color: #4a148c; color: #f8bbd0; padding: 15px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); }
+        .resultado { background-color: #fce4ec; border-left: 5px solid #e91e63; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .btn-regresar { display: inline-block; padding: 10px 20px; background-color: #f06292; color: white; text-decoration: none; border-radius: 25px; margin-bottom: 20px; font-weight: bold; transition: background 0.3s; }
+        .btn-regresar:hover { background-color: #d81b60; }
+        .nota { font-size: 0.9em; color: #c2185b; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="btn-regresar">← Regresar a la Portada</a>
+        
+        <h2>1. Desarrollo Web: HTML</h2>
+        <p>Ejemplos prácticos de las etiquetas y atributos vistos en clase, mostrando su sintaxis y su resultado visual.</p>
+
+        <h3>Title (Título de la pestaña)</h3>
+        <p class="nota">Sirve para ponerle un título a la página web. Se coloca dentro de la etiqueta &lt;head&gt;.</p>
+        <pre><code>&lt;title&gt;Programación 606&lt;/title&gt;</code></pre>
+
+        <h3>Html (Estructura principal)</h3>
+        <p class="nota">Es todo lo que pasa el código, el contenedor raíz de la página.</p>
+        <pre><code>&lt;html&gt;
+   ... todo el código ...
+&lt;/html&gt;</code></pre>
+
+        <h3>Body (Cuerpo visible)</h3>
+        <p class="nota">Es todo el contenido visible de la página web.</p>
+        <pre><code>&lt;body&gt;
+   ... contenido visible ...
+&lt;/body&gt;</code></pre>
+
+        <h3>H1 (Título principal)</h3>
+        <pre><code>&lt;h1&gt;Título de la página&lt;/h1&gt;</code></pre>
+        <div class="resultado">
+            <h1>Título de la página</h1>
+        </div>
+
+        <h3>P (Párrafo)</h3>
+        <pre><code>&lt;p&gt;Este es un párrafo de ejemplo&lt;/p&gt;</code></pre>
+        <div class="resultado">
+            <p>Este es un párrafo de ejemplo</p>
+        </div>
+
+        <h3>Marquee (Texto en movimiento)</h3>
+        <p class="nota">Para que gire el texto de derecha a izquierda o inversa (etiqueta clásica).</p>
+        <pre><code>&lt;marquee direction="right" speed="5" behavior="alternate"&gt;
+   Texto que gira
+&lt;/marquee&gt;</code></pre>
+        <div class="resultado">
+            <marquee direction="right" speed="5" behavior="alternate" style="color: #d81b60; font-weight: bold;">Texto que gira</marquee>
+        </div>
+
+        <h3>Body bgcolor (Fondo de color)</h3>
+        <p class="nota">Se utiliza para ponerle fondo de un color a la página (atributo clásico).</p>
+        <pre><code>&lt;body bgcolor="#fce4ec"&gt;</code></pre>
+        <div class="resultado">
+            <p><em>Nota: src Este atributo se aplica directamente a la etiqueta &lt;body&gt;. Aquí vemos un ejemplo de fondo rosa claro.</em></p>
+        </div>
+
+        <h3>A href (Vínculos / Enlaces)</h3>
+        <p class="nota">Se mete al link al darle clic. En este ejemplo, el texto es de color rosa.</p>
+        <pre><code>&lt;a href="https://www.youtube.com" style="color: deeppink;"&gt;Ir a YouTube&lt;/a&gt;</code></pre>
+        <div class="resultado">
+            <a href="https://www.youtube.com" style="color: deeppink; font-weight: bold;" target="_blank">Ir a YouTube (Rosa)</a>
+        </div>
+
+        <h3>P style (Estilos en línea)</h3>
+        <p class="nota">Le agrega color a la letra y tamaño.</p>
+        <pre><code>&lt;p style="color: #e91e63; font-size: 24px;"&gt;Texto con estilo&lt;/p&gt;</code></pre>
+        <div class="resultado">
+            <p style="color: #e91e63; font-size: 24px; font-weight: bold;">Texto con estilo</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

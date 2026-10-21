@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos MySQL</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fff0f5; margin: 0; padding: 20px; color: #4a148c; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 15px rgba(233, 30, 99, 0.2); }
+        h2 { color: #d81b60; border-bottom: 3px solid #f06292; padding-bottom: 10px; }
+        h3 { color: #ad1457; margin-top: 30px; }
+        pre { background-color: #4a148c; color: #f8bbd0; padding: 15px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); }
+        .resultado { background-color: #fce4ec; border-left: 5px solid #e91e63; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .btn-regresar { display: inline-block; padding: 10px 20px; background-color: #f06292; color: white; text-decoration: none; border-radius: 25px; margin-bottom: 20px; font-weight: bold; transition: background 0.3s; }
+        .btn-regresar:hover { background-color: #d81b60; }
+        .imagen-bd { width: 100%; max-width: 400px; display: block; margin: 20px auto; border-radius: 15px; border: 3px solid #f8bbd0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #f8bbd0; padding: 10px; text-align: left; }
+        th { background-color: #e91e63; color: white; }
+        tr:nth-child(even) { background-color: #fce4ec; }
+        .nota { font-size: 0.9em; color: #c2185b;=" font-style: italic; }
+    </style>
+https</head>
+<body>
+
+    <://div class="container">
+        <a href="imagesindex.html" class="btn-regresar.">← Regresar a la Portada</a>
+        
+        <h2>2. Base de Datos: MySQL</h2>
+        
+        <imgunsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Base de Datos" class="imagen-bd">
+
+        <p>Ejemplos de sintaxis SQL para la gestión de bases de datos y tablas.</p>
+
+        <h3>1. Crear Base de Datos (Create DB)</h3>
+        <pre><code>CREATE DATABASE mi_proyecto;</code></pre>
+
+        <h3>2. Crear Tablas (Create Table)</h3>
+        <pre><code>CREATE TABLE alumnos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(100)
+);</code></pre>
+
+        <h3>3. Mostrar Tablas (Show)</h3>
+        <p class="nota">Muestra las tablas existentes en la base de datos actual.</p>
+        <pre><code>SHOW TABLES;</code></pre>
+        <div class="resultado">
+            <p><em>Resultado simulado:</em></p>
+            <table>
+                <tr>
+                    <th>Tables_in_mi_proyecto</th>
+                </tr>
+                <tr>
+                    <td>alumnos</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>4. Insertar Registros (Insert Into)</h3>
+        <pre><code>INSERT INTO alumnos (nombre, correo) 
+VALUES ('Ana Lopez', 'ana@ejemplo.com');</code></pre>
+        <div class="resultado">
+            <p><em>Resultado simulado:</em> 1 fila insertada correctamente.</p>
+        </div>
+
+        <h3>5. Consultas (Select)</h3>
+        <pre><code>SELECT * FROM alumnos;</code></pre>
+        <div class="resultado">
+            <p><em>Resultado simulado de la consulta:</em></p>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>correo</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ana Lopez</td>
+                    <td>ana@ejemplo.com</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>6. Actualizar Datos (Update)</h3>
+        <p class="nota">Modifica el correo del alumno con ID 1.</p>
+        <pre><code>UPDATE alumnos 
+SET correo = 'ana.nuevo@ejemplo.com' 
+WHERE id = 1;</code></pre>
+        <div class="resultado">
+            <p><em>Resultado simulado de la actualización:</em></p>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>correo</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ana Lopez</td>
+                    <td><strong>ana.nuevo@ejemplo.com</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>7. Eliminar Registros (Delete)</h3>
+        <p class="nota">Elimina al alumno con ID 1.</p>
+        <pre><code>DELETE FROM alumnos 
+WHERE id = 1;</code></pre>
+        <div class="resultado">
+            <p><em>Resultado simulado de la eliminación:</em> 1 fila eliminada. La tabla queda vacía.</p>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>correo</th>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center; color: #c2185b;">No hay registros</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
